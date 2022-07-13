@@ -1,0 +1,26 @@
+x = input('How many pencils would you like to use: ')
+while x.isdigit() == False or int(x) <= 0:
+    x = input('The number of pencils should be numeric and positive: ')
+y = str(input('Who will be the first (John, Jack): '))
+while y !== 'John' or y !== 'Jack':
+    y = str(input('Input is incorrect and re-query the input with "Choose between "John" and "Jack": '))
+z = int(input(f"{y}'s turn:"))
+x = int(x) - z
+print(x*'|')
+
+while x > 0:
+    if y == 'John':
+        y = 'Jack'
+    else:
+        y = 'John'
+    z = int(input(f"{y}'s turn:"))
+    if x == str:
+        print('Possible values: 1, 2 or 3')
+    elif x - z < 0:
+        print('Too many pencils were taken')
+    elif x-z > 0:
+        x -= z
+    else:
+        x -= z
+        print(f'{y} won!')
+    print(x*'|')
